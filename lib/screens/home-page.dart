@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vehicle_check/constants.dart';
 import 'package:vehicle_check/screens/profile.dart';
+import 'package:vehicle_check/utils/reuseableCard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -188,7 +189,45 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Row()
+            Row(
+              children: [
+                Expanded(
+                    child: ReusableCard(
+                  cardData: "202468",
+                  cardTitle: "Pending",
+                  onPress: (() {}),
+                  iconName: Icons.pending_actions,
+                )),
+                Expanded(
+                    child: ReusableCard(
+                  cardData: "0",
+                  cardTitle: "In Yard",
+                  onPress: (() {}),
+                  iconName: Icons.wallet_giftcard,
+                ))
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Expanded(
+                    child: ReusableCard(
+                  cardData: "0",
+                  cardTitle: "Realease",
+                  onPress: (() {}),
+                  iconName: Icons.upcoming_outlined,
+                )),
+                Expanded(
+                    child: ReusableCard(
+                  cardData: "0",
+                  cardTitle: "Holds",
+                  onPress: (() {}),
+                  iconName: Icons.pause_circle_outline,
+                ))
+              ],
+            )
           ],
         ),
       ),
