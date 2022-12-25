@@ -107,6 +107,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Scaffold(
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               alignment: Alignment.center,
@@ -192,6 +193,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
                     child: ReusableCard(
@@ -231,7 +233,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             SizedBox(
-              height: 70,
+              height: 50,
             ),
             SafeArea(
               child: Container(
@@ -273,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                     ]))
                   ],
                 ),
-                height: 56,
+                height: 60,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: kGreen,
