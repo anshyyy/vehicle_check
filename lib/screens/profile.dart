@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vehicle_check/constants.dart';
 import 'package:vehicle_check/screens/home-page.dart';
+import 'package:vehicle_check/screens/updateProfile.dart';
 import 'package:vehicle_check/utils/button.dart';
 
 class Profile extends StatelessWidget {
@@ -32,7 +33,7 @@ class Profile extends StatelessWidget {
                   color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(0.5),
                   boxShadow: [
-                    BoxShadow(
+                    const BoxShadow(
                         color: Colors.black38, spreadRadius: 2, blurRadius: 5),
                   ]),
               child: Column(
@@ -71,16 +72,16 @@ class Profile extends StatelessWidget {
                     color: Colors.black12,
                     height: 20,
                   ),
-                  Text("Address",
+                  const Text("Address",
                       style: TextStyle(fontWeight: FontWeight.bold)),
-                  Text("MANGO",
+                  const Text("MANGO",
                       style:
                           TextStyle(color: kBlue, fontWeight: FontWeight.bold)),
-                  Text(
+                  const Text(
                     "Agency Name",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text("KK ENTERPRISES",
+                  const Text("KK ENTERPRISES",
                       style:
                           TextStyle(color: kBlue, fontWeight: FontWeight.bold))
                 ],
@@ -92,10 +93,10 @@ class Profile extends StatelessWidget {
           ),
           InkWell(
               onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => HomePage()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const UpdateProfile()));
               },
-              child: ButtonWidget(
+              child: const ButtonWidget(
                 text: "Update",
                 backg_color: kYellow,
                 textColor: Colors.black,
