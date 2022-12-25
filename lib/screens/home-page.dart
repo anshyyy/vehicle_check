@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vehicle_check/constants.dart';
 import 'package:vehicle_check/screens/profile.dart';
 import 'package:vehicle_check/utils/reuseableCard.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,6 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    int _selectedIndex = 0;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kGreen,
@@ -227,6 +229,56 @@ class _HomePageState extends State<HomePage> {
                   iconName: Icons.pause_circle_outline,
                 ))
               ],
+            ),
+            SizedBox(
+              height: 70,
+            ),
+            SafeArea(
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(5),
+                      child: LiteRollingSwitch(
+                        onTap: () {},
+                        onChanged: (bool position) {
+                          print('The button is $position');
+                        },
+                        onDoubleTap: () {},
+                        value: true,
+                        textOn: "Online",
+                        textOff: "Offline",
+                        colorOn: mycolorkOrange,
+                        colorOff: Colors.red,
+                        iconOn: Icons.online_prediction,
+                        iconOff: Icons.offline_bolt,
+                        onSwipe: (bool postion) {
+                          print('The button is $postion');
+                        },
+                      ),
+                    ),
+                    Container(
+                        child: Row(children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.sync),
+                        iconSize: 40,
+                        splashColor: Colors.grey[400],
+                      ),
+                      Text(
+                        "SYNC   ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ]))
+                  ],
+                ),
+                height: 56,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: kGreen,
+                ),
+              ),
             )
           ],
         ),

@@ -37,3 +37,19 @@ MaterialColor mycolorkYellow = MaterialColor(
     900: Color(0xFFF1D16C),
   },
 );
+
+MaterialColor mycolorkOrange = MaterialColor(
+  0xFFF1D16C,
+  <int, Color>{
+    50: Color(0xFFF1D16C),
+    100: Color(0xFFF1D16C),
+    200: Color(0xFFF1D16C),
+    300: Color(0xFFF1D16C),
+    400: Color(0xFFF1D16C),
+    500: Color(0xFFF1D16C),
+    600: Color(0xFFF1D16C),
+    700: Color(0xFFF1D16C),
+    800: Color(0xFFF1D16C),
+    900: Color(0xFFF1D16C),
+  },
+);
